@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Telgrid</title>
-    <!-- External CSS -->
+    <title>Telgrid - Connecting the World</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- External JavaScript for ads (async to avoid blocking rendering) -->
+
+    <!-- External JavaScript for Ads (async to avoid blocking rendering) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7290127773146699" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <!-- Main Content Wrapper -->
-    <div class="main">
-        <!-- Header and Navbar -->
+
+    <!-- Main Wrapper -->
+    <div class="main-container">
+    
+        <!-- Navigation Bar -->
         <header>
             <nav>
-                <div class="nav-left">
-                    <div class="logo">TELGRID</div>
-                    <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                <div class="logo">
+                    <a href="/">TELGRID</a>
                 </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
                 <div class="nav-right">
-                    <a href="login.html" class="btn-nav">Login</a>
-                    <a href="signup.html" class="btn-nav signup">Signup</a>
+                    <a href="/login" class="btn-nav">Login</a>
+                    <a href="/signup" class="btn-nav signup">Signup</a>
                 </div>
             </nav>
         </header>
-
+        
         <!-- Hero Section -->
-        <main>
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Hi, Welcome to <span class="highlight">Telgrid</span></h1>
-                    <p>This will help you to</p>
-                    <span id="element"></span>
-                </div>
-            </section>
-        </main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to <span class="highlight">Telgrid</span></h1>
+                <p>This platform helps you to:</p>
+                <span id="typed-output"></span> <!-- Typed.js will inject here -->
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer>
-            <div class="footer-content">
-                <p>Telgrid Connecting the World</p>
-                <p>&copy; 2023 Telgrid.world | All Rights Reserved</p>
-            </div>
+            <p>Telgrid - Connecting the World</p>
+            <p>&copy; 2023 Telgrid | All Rights Reserved</p>
         </footer>
+    
     </div>
 
     <!-- Typed.js script (placed at the bottom for better performance) -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            new Typed("#element", {
+            new Typed("#typed-output", {
                 strings: ["grow your business", "connect with people", "build amazing projects"],
                 typeSpeed: 50,
                 backSpeed: 50,
@@ -70,6 +66,6 @@
         });
     </script>
 </body>
-
 </html>
+
 
