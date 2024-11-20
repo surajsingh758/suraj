@@ -1,212 +1,137 @@
-/* Reset some default styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and Font Styling */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
     line-height: 1.6;
-    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Header and Navigation Styles */
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
 header {
-    background-color: #333;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    background-color: #000;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav-left .logo {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
+    text-decoration: none;
     font-weight: 600;
-    letter-spacing: 1px;
 }
 
 .nav-links {
-    list-style-type: none;
     display: flex;
-    gap: 20px;
+    list-style-type: none;
 }
 
 .nav-links li {
-    display: inline-block;
+    margin: 0 15px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 400;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
+    color: #ff9e00;
 }
 
-/* Right Section - Login / Signup Buttons */
 .nav-right .btn-nav {
-    background-color: #007bff;
     color: #fff;
+    background-color: #ff9e00;
     padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    transition: background-color 0.3s;
 }
 
 .nav-right .btn-nav:hover {
-    background-color: #0056b3;
+    background-color: #e68a00;
 }
 
-.nav-right .signup {
-    background-color: #28a745;
-    margin-left: 10px;
-}
-
-.nav-right .signup:hover {
-    background-color: #218838;
-}
-
-/* Hero Section */
+/* Hero Section Styles */
 .hero {
-    background: linear-gradient(135deg, #00c6ff, #007bff);
-    color: white;
-    padding: 100px 0;
+    height: 100vh;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     text-align: center;
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.hero h1 {
+.hero-content h1 {
     font-size: 3rem;
-    font-weight: 700;
     margin-bottom: 20px;
 }
 
-.hero .highlight {
-    color: #ffeb3b;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    font-weight: 400;
+.hero-content p {
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
-#element {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #ffeb3b;
+.hero-content .highlight {
+    color: #ff9e00;
 }
 
-/* Footer Section */
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 40px 0;
+    padding: 10px;
     text-align: center;
 }
 
-.footer-content p {
-    margin-bottom: 10px;
-    font-size: 1rem;
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
 
-.footer-content p:last-child {
-    font-size: 0.9rem;
-    color: #ddd;
-}
-
-/* Responsiveness */
-@media screen and (max-width: 768px) {
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
     .nav-links {
         display: none;
     }
-
-    .nav-right .btn-nav {
-        padding: 8px 16px;
+    .nav-right {
+        display: none;
     }
-
-    .hero h1 {
+    
+    .hero-content h1 {
         font-size: 2.5rem;
     }
 
-    .hero p {
-        font-size: 1.1rem;
+    .hero-content p {
+        font-size: 1.2rem;
     }
-}
-
-@media screen and (max-width: 480px) {
-    .nav-left .logo {
-        font-size: 20px;
-    }
-
-    .hero {
-        padding: 80px 0;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .footer-content p {
-        font-size: 0.85rem;
-    }
-}
-
-/* Button Hover Animation */
-.btn-nav, .nav-links a {
-    transition: all 0.3s ease;
-}
-
-.btn-nav:hover, .nav-links a:hover {
-    transform: scale(1.05);
-}
-
-/* Gradient Background Animation for Hero Section */
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.hero {
-    animation: gradientShift 5s ease infinite;
-    background: linear-gradient(135deg, #00c6ff, #007bff);
-    background-size: 400% 400%;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
 }
 
